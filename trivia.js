@@ -1,9 +1,10 @@
-enterButton.addEventListener('click', function(e) {
-    e.preventDefault();
-    displayScore();
-    displayQuestion();
-});
+document.getElementById("enter-button").addEventListener('click', openquestion);
 
+function openquestion() {
+    document.getElementByClassName("question-page");
+}
+
+var quiz = new Quiz(questions);
 var questionNumber = document.querySelector(".question-number");
 var quizButton = document.querySelector("#enter-button");
 var nextButton = document.querySelector(".next-button");
@@ -38,7 +39,7 @@ var triviaQuestions = [
     new Question('Which actor won Best Leading Actor in a Musical?',
     ["Tony Shalhoub - The Band's Visit", "Harry Hadden-Paton - My Fair Lady", "Joshua Henry - Carousel", "Ethan Slater - SpongeBob SquarePants"], "Tony Shalhoub - The Band's Visit"),
     new Question('Which actress won Best Leading Actress in a Musical?',
-    ["Jessie Mueller - Carousel", "Taylor Louderman - Mean Girls", "LaChanze - Summer: The Donna Summer Musical", "Hailey Kilgore - Once On This Island", "Katrina Lenk - The Band's Visit", "Lauren Ambrose - My Fair Lady"], "Katrina Lenk - The Band's Visit),
+    ["Jessie Mueller - Carousel", "Taylor Louderman - Mean Girls", "LaChanze - Summer: The Donna Summer Musical", "Hailey Kilgore - Once On This Island", "Katrina Lenk - The Band's Visit", "Lauren Ambrose - My Fair Lady"], "Katrina Lenk - The Band's Visit"),
     new Question('Which actor won Best Leading Actor in a Play?',
     ["Tom Holand - Travesties", "Jamie Parker - Harry Potter and the Cursed Child", "Andrew Garfield - Angels in America", "Mark Rylance - Farinelli and the King", "Denzel Washington - The Iceman Cometh"], "Andrew Garfield - Angels in America"),
     new Question("Which actress won Best Leading Actress in a Play?",
