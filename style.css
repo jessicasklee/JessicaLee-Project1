@@ -1,0 +1,21 @@
+nav {
+    background-image: url("./Images/tonyawards_1.jpg");
+    text-align:center;   
+    height: 500px;
+    width: 100%;
+    background-repeat: no-repeat;
+    margin: auto;
+    background-size: cover;
+}
+
+h1 {
+    text-align: center;
+}
+
+.frontpage {
+    text-align: center;
+}
+
+#enter-button {
+    text-align: center;
+}
