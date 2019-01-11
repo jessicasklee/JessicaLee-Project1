@@ -40,3 +40,20 @@ h1 {
     text-align: center;
     padding-bottom: 180px;
 }
+
+#question-page {
+    position: absolute;
+    width: 500px;
+    top: 10%;
+    left: 10%;
+    background-color: white;
+    opacity: .95;
+    height: 0;
+    overflow: hidden;
+}
+
+#enter-button {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+}
