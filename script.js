@@ -32,6 +32,7 @@ var questions = [question1, question2, question3, question4, question5]
 
 var qIndex = 0;
 var score = 0;
+var currentQuiz = undefined;
 
 var questionPageDiv = document.getElementById('question-page');
 var scoreDiv = document.getElementById('score');
@@ -47,6 +48,11 @@ enterButtonDiv.addEventListener("click", function() {
 })
 
 function askQuestion() {
+    if (answersDiv.children.length > 0) {
+        while (answersDiv.firstChild) {
+            answersDiv.removeChild(answersDiv.firstChild);
+        }
+    }
     questionDiv.innerHTML = questions[qIndex].question;
     questions[qIndex].choices.forEach(choice => {
         var choiceEl = document.createElement("div");
@@ -63,6 +69,9 @@ function askQuestion() {
         answersDiv.appendChild(choiceEl);
     })
 };
+
+
+
 
 function goToNextQuestion(prevAnswer) {
     qIndex++;
