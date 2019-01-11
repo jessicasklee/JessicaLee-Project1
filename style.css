@@ -4,14 +4,35 @@
     background-color: rgb(248,255,0);
 }
 
+h1 {
+    padding-top:25px;
+    text-align: center;
+    font-size: 32px;
+    font-family: 'Limelight', cursive;
+    font-weight: 100;
+    left: 50%;
+}
+
+h3 {
+    padding-top: 104px;
+    text-align: center;
+    text-justify: center; 
+    font-family: sans-serif;
+    font-size: 18px;
+    font-weight: lighter;
+    font-style: italic;
+    left: 50%;
+}
+
 #playbillheader {
     background-image: url("./Images/playbill.jpg");
-    height: 100%;
+    height: 95%;
     width: 56%;
     background-repeat: no-repeat;
     display: block;
     margin-left: auto;
     margin-right: auto;
+    left: 50%;
 }
 
 #header {
@@ -27,33 +48,52 @@
     margin-right: auto;
 }
 
-h1 {
-    text-align: center;
-}
-
 .frontpage {
     text-align: center;
     padding-top: 30px;
 }
 
+#question-page {
+    position: absolute;
+    width: 800px;
+    top: 10%;
+    left: 18%;
+    background-color: white;
+    opacity: .92;
+    height: 0;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
 #enter-button {
-    text-align: center;
-    padding-bottom: 180px;
+    position: absolute;
+    top: 5rem;
+    left: 5rem;
+    width: 140px;
+    height: 70px;
+    border-radius: 10px;
+    border-width: 3px;
+    border-color: black;
+    border-style: dotted;
+    color:black;
+    font-size: 20px;
+    opacity: 0.98;
 }
 
 #question-page {
+    text-align: center;
+    font-size: 30px;
+    font-family: sans-serif;
     position: absolute;
-    width: 500px;
-    top: 10%;
-    left: 10%;
-    background-color: white;
-    opacity: .95;
-    height: 0;
-    overflow: hidden;
+    left: 21%;
 }
 
-#enter-button {
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
+#question {
+    padding-top: 50px;
+    font-size: 45px;
+    font-family: 'Limelight', cursive;
+}
+
+#answers {
+    padding-top: 50px;
 }

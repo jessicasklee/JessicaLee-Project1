@@ -38,19 +38,26 @@ var scoreDiv = document.getElementById('score');
 var questionNumDiv = document.getElementById('question-number');
 var questionDiv = document.getElementById('question');
 var answersDiv = document.getElementById('answers');
-var nextButtonAnc = document.getElementById('next-button');
 var enterButtonDiv = document.getElementById("enter-button");
+var clearButtonDiv = document.getElementById("nextQuestion")
 
 enterButtonDiv.addEventListener("click", function() {
-    questionPageDiv.style.height = "300px";
+    questionPageDiv.style.height = "500px";
     questionPageDiv.style.transition = ".25s ease-in-out";
 })
 
 function askQuestion() {
+    // ask the question
+    // set the innerhtml === question text
+    questionDiv.innerHTML = questions[qIndex].question;
+    // wipe out previous answers
+    
+    // populate new answers
     questionDiv.innerHTML = questions[qIndex].question;
     questions[qIndex].choices.forEach(choice => {
         var choiceEl = document.createElement("div");
         choiceEl.innerHTML = choice;
+        answersDiv.appendChild(choiceEl);
         choiceEl.addEventListener('click', function() {
             if (choiceEl.innerHTML === questions[qIndex].answer) {
                 console.log("Correct!");
@@ -60,18 +67,28 @@ function askQuestion() {
                 goToNextQuestion(false);
             }
         })
-        answersDiv.appendChild(choiceEl);
     })
 };
 
 function goToNextQuestion(prevAnswer) {
-    qIndex++;
-    if (prevAnswer === true) {
-        score++;
-    }
 
+    if (prevAnswer === true) {
+        alert("Correct!");
+        score++;  
+    }
     // logic to iterate html to next question.
-}
+    else {
+        alert("Wrong!");
+    } 
+
+// while (choiceEl.firstChild) choiceEl.removeChild(choiceEl.firstChild);
+qIndex++;
+questionDiv.innerHTML = questions.question;
+questionDiv.innerHTML = questions.choices;
+
+askQuestion();
+
+};
 
 document.addEventListener("DOMContentLoaded", function(event) { 
     askQuestion();
